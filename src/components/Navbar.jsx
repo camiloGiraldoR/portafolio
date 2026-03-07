@@ -50,6 +50,7 @@ const Navbar = () => {
         { name: data.nav.experience, href: '#experience' },
         { name: data.nav.skills, href: '#skills' },
         { name: data.nav.education, href: '#education' },
+        { name: data.nav.resume, href: '#resume' },
     ];
 
     return (

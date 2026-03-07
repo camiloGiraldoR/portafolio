@@ -5,6 +5,7 @@ export const portfolioData = {
             experience: 'Experiencia',
             skills: 'Habilidades',
             education: 'Educación',
+            resume: 'Currículum'
         },
         hero: {
             availability: 'Abierto a nuevas oportunidades',
@@ -18,7 +19,8 @@ export const portfolioData = {
             skills: 'Habilidades Técnicas',
             skillsDesc: 'Un conjunto de tecnologías dominadas a lo largo de mi carrera para construir aplicaciones robustas, escalables y modernas.',
             education: 'Formación Académica',
-            courses: 'Cursos y Certificaciones'
+            courses: 'Cursos y Certificaciones',
+            resume: 'Descargar Mi CV'
         },
         footer: {
             rights: 'Todos los derechos reservados.'
@@ -30,6 +32,7 @@ export const portfolioData = {
             phone: "+57 312 3865 021",
             location: "Cali - Colombia",
             summary: "Ingeniero Full Stack con más de 10 años de trayectoria diseñando soluciones tecnológicas escalables y de alto impacto. Experto en el ecosistema Java, .NET, Node.js y frameworks modernos como React y Angular. Mi base sólida en ingeniería de software tradicional me permite garantizar la calidad, el rigor técnico y la mantenibilidad en cada desarrollo.\n\nAdemás, he potenciado mi flujo de trabajo integrando herramientas de Inteligencia Artificial de forma consciente, utilizándolas para optimizar tiempos de entrega y mejorar la precisión sin comprometer los fundamentos técnicos. Especialista en arquitecturas cloud (AWS/Azure) y liderazgo técnico, transformo problemas complejos en sistemas robustos y eficientes.",
+            cvFile: "HV - Camilo Giraldo Ramirez.pdf"
         },
         roles: [
             "FullStack Developer Java/Angular",
@@ -186,6 +189,7 @@ export const portfolioData = {
             experience: 'Experience',
             skills: 'Skills',
             education: 'Education',
+            resume: 'Resume'
         },
         hero: {
             availability: 'Open to new opportunities',
@@ -199,7 +203,8 @@ export const portfolioData = {
             skills: 'Technical Skills',
             skillsDesc: 'A set of mastered technologies throughout my career to build robust, scalable, and modern applications.',
             education: 'Education',
-            courses: 'Courses and Certifications'
+            courses: 'Courses and Certifications',
+            resume: 'Download My Resume'
         },
         footer: {
             rights: 'All rights reserved.'
@@ -211,6 +216,7 @@ export const portfolioData = {
             phone: "+57 312 3865 021",
             location: "Cali - Colombia",
             summary: "Full Stack Engineer with 10+ years of experience building scalable, high-impact technological solutions. Expert in Java, .NET, Node.js, and modern frameworks like React and Angular. My solid foundation in traditional software engineering allows me to ensure quality, technical rigor, and maintainability in every development.\n\nAdditionally, I have enhanced my workflow by consciously integrating Artificial Intelligence tools, using them to optimize delivery times and improve precision without compromising technical fundamentals. Specialist in cloud architectures (AWS/Azure) and technical leadership, I transform complex challenges into robust and efficient systems.",
+            cvFile: "CV - Camilo Giraldo Ramirez.pdf"
         },
         roles: [
             "FullStack Developer Java/Angular",
