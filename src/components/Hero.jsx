@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight, MapPin, Mail, Phone } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
+import profilePhoto from '../assets/photo-profile.jpeg';
 
 const Hero = () => {
     const { language } = useLanguage();
@@ -78,7 +79,7 @@ const Hero = () => {
                         className="relative w-64 h-64 md:w-80 md:h-80 rounded-[2rem] overflow-hidden border-4 border-white dark:border-zinc-800 shadow-2xl transition-all duration-300 hover:shadow-blue-500/20 hover:border-blue-200 dark:hover:border-blue-900/50"
                     >
                         <img
-                            src="/src/assets/photo-profile.jpeg"
+                            src={profilePhoto}
                             alt={`Foto de ${name}`}
                             className="w-full h-full object-cover"
                         />

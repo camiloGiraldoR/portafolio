@@ -1,13 +1,37 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, Mail, Globe } from 'lucide-react';
+import { Menu, X, Mail, Globe, Sun, Moon } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [darkMode, setDarkMode] = useState(true);
     const { language, toggleLanguage } = useLanguage();
+
+    useEffect(() => {
+        // Inicializar tema basado en preferencia o default oscuro
+        const isDark = localStorage.getItem('theme') !== 'light';
+        setDarkMode(isDark);
+        if (isDark) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    }, []);
+
+    const toggleTheme = () => {
+        const newDark = !darkMode;
+        setDarkMode(newDark);
+        if (newDark) {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+        }
+    };
 
     const data = portfolioData[language];
 
@@ -69,6 +93,13 @@ const Navbar = () => {
                                 <Mail size={20} />
                             </a>
                             <button
+                                onClick={toggleTheme}
+                                className="p-2 text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
+                                aria-label="Toggle theme"
+                            >
+                                {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+                            </button>
+                            <button
                                 onClick={toggleLanguage}
                                 className="flex items-center space-x-1.5 px-3 py-1.5 bg-gray-100/50 hover:bg-gray-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-gray-700 dark:text-gray-300 rounded-full transition-colors text-sm font-medium"
                                 aria-label="Toggle language"
@@ -80,6 +111,12 @@ const Navbar = () => {
                     </div>
 
                     <div className="-mr-2 flex md:hidden items-center space-x-4">
+                        <button
+                            onClick={toggleTheme}
+                            className="p-2 text-gray-600 dark:text-gray-400"
+                        >
+                            {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+                        </button>
                         <button
                             onClick={toggleLanguage}
                             className="flex items-center space-x-1 px-3 py-1.5 bg-gray-100 hover:bg-gray-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-gray-700 dark:text-gray-300 rounded-full transition-colors text-sm font-medium"
