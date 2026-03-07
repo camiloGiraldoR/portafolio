@@ -16,7 +16,7 @@ const Hero = () => {
 
     return (
         <section id="about" className="pt-32 pb-16 md:pt-48 md:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+            <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
