@@ -44,7 +44,7 @@ export const portfolioData = {
             { category: "Frontend", items: ["React.js", "Angular", "TypeScript", "JavaScript", "HTML/CSS", "Redux"] },
             { category: "Databases", items: ["PostgreSQL", "Oracle DB", "MySQL", "SQL Server", "Azure DB2"] },
             { category: "Cloud & DevOps", items: ["AWS (RDS, IAM, S3, EC2)", "Azure", "CI/CD", "Jenkins", "Anthos", "Kubernetes", "Docker"] },
-            { category: "Tools & Testing", items: ["Maven", "Gradle", "Git", "Jest", "Kafka", "NewRelic", "Scrum"] },
+            { category: "Tools & Testing", items: ["JUnit 5", "Mockito", "Maven", "Gradle", "Git", "Jest", "Kafka", "NewRelic", "Scrum"] },
         ],
         experience: [
             {
@@ -225,7 +225,7 @@ export const portfolioData = {
             { category: "Frontend", items: ["React.js", "Angular", "TypeScript", "JavaScript", "HTML/CSS", "Redux"] },
             { category: "Databases", items: ["PostgreSQL", "Oracle DB", "MySQL", "SQL Server", "Azure DB2"] },
             { category: "Cloud & DevOps", items: ["AWS (RDS, IAM, S3, EC2)", "Azure", "CI/CD", "Jenkins", "Anthos", "Kubernetes", "Docker"] },
-            { category: "Tools & Testing", items: ["Maven", "Gradle", "Git", "Jest", "Kafka", "NewRelic", "Scrum"] },
+            { category: "Tools & Testing", items: ["JUnit 5", "Mockito", "Maven", "Gradle", "Git", "Jest", "Kafka", "NewRelic", "Scrum"] },
         ],
         experience: [
             {

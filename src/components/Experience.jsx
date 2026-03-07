@@ -1,58 +1,70 @@
 import { motion } from 'framer-motion';
-import { Briefcase } from 'lucide-react';
+import { Calendar, MapPin, Briefcase } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
+import { Reveal } from './Reveal';
+import { SpotlightCard } from './SpotlightCard';
 
 const Experience = () => {
     const { language } = useLanguage();
     const data = portfolioData[language];
 
     return (
-        <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-            <div className="flex items-center mb-12">
-                <Briefcase className="w-8 h-8 text-blue-600 mr-4" />
-                <h2 className="text-3xl font-bold text-gray-900 dark:text-white">{data.sections.experience}</h2>
-            </div>
+        <section id="experience" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <Reveal>
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                        {data.sections.experience}
+                    </h2>
+                    <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full" />
+                </div>
+            </Reveal>
 
-            <div className="space-y-16">
-                {data.experience.map((exp, idx) => (
-                    <motion.div
-                        key={exp.id}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-100px" }}
-                        transition={{ duration: 0.5, delay: idx * 0.1 }}
-                        className="relative pl-8 md:pl-0"
-                    >
-                        {/* Línea vertical movida a la derecha del bloque de rol/fecha */}
-                        <div className="hidden md:block absolute right-[97%] top-2 bottom-0 w-px bg-gray-200 dark:bg-zinc-800" />
+            <div className="space-y-12">
+                {data.experience.map((exp, index) => (
+                    <Reveal key={exp.id} delay={index * 0.1}>
+                        <div className="relative pl-8 border-l-2 border-gray-200 dark:border-zinc-800 hover:border-blue-500 dark:hover:border-blue-500 transition-colors">
+                            <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-white dark:bg-zinc-950 border-2 border-blue-600" />
 
-                        <div className="md:grid md:grid-cols-4 md:gap-8">
-                            <div className="mb-4 md:mb-0 md:text-right relative">
-                                <div className="hidden md:block absolute right-[-21px] top-2 w-3 h-3 rounded-full bg-blue-600 ring-4 ring-white dark:ring-zinc-950" />
-                                <h3 className="text-xl font-bold text-gray-900 dark:text-white">{exp.company}</h3>
-                                <span className="text-blue-600 dark:text-blue-400 font-medium block">{exp.role}</span>
-                                <span className="text-sm text-gray-500 dark:text-gray-400 block mt-1">{exp.period}</span>
+                            <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+                                <div>
+                                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                                        {exp.role}
+                                    </h3>
+                                    <div className="flex items-center text-blue-600 dark:text-blue-400 font-medium">
+                                        <Briefcase className="w-4 h-4 mr-2" />
+                                        {exp.company}
+                                    </div>
+                                </div>
+                                <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm bg-gray-100 dark:bg-zinc-800/50 px-3 py-1 rounded-full w-fit">
+                                    <Calendar className="w-4 h-4 mr-2" />
+                                    {exp.period}
+                                </div>
                             </div>
 
-                            <div className="md:col-span-3 space-y-8">
-                                {exp.projects.map((project, pIdx) => (
-                                    <div key={pIdx} className="bg-white dark:bg-zinc-900 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-zinc-800 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-200 dark:hover:border-blue-900/50">
-                                        <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{project.client}</h4>
-                                        <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
+                            <div className="grid grid-cols-1 gap-6">
+                                {exp.projects.map((project, pIndex) => (
+                                    <SpotlightCard key={pIndex} className="group bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm p-6 rounded-xl border border-gray-100 dark:border-zinc-800 transition-all duration-300">
+                                        <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-2 flex items-center">
+                                            <span className="w-2 h-2 bg-blue-500 rounded-full mr-2" />
+                                            {project.client}
+                                        </h4>
+                                        <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                                            {project.description}
+                                        </p>
                                         <ul className="space-y-2">
-                                            {project.responsibilities.map((resp, rIdx) => (
-                                                <li key={rIdx} className="flex text-sm text-gray-600 dark:text-gray-400 pb-1">
-                                                    <span className="mr-3 mt-1.5 w-1 h-1 flex-shrink-0 bg-blue-500 rounded-full"></span>
-                                                    <span>{resp}</span>
+                                            {project.responsibilities.map((resp, rIndex) => (
+                                                <li key={rIndex} className="text-gray-600 dark:text-gray-400 text-sm flex items-start">
+                                                    <span className="text-blue-500 mr-2">•</span>
+                                                    {resp}
                                                 </li>
                                             ))}
                                         </ul>
-                                    </div>
+                                    </SpotlightCard>
                                 ))}
                             </div>
                         </div>
-                    </motion.div>
+                    </Reveal>
                 ))}
             </div>
         </section>
