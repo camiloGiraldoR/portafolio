@@ -5,7 +5,9 @@ import {
     Linkedin,
     Github,
     Mail,
-    Phone
+    Phone,
+    MapPin,
+    ArrowRight
 } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
@@ -40,9 +42,10 @@ const Hero = () => {
                         {title}
                     </h2>
                     <p className="text-gray-600 dark:text-gray-400 text-lg mb-8 leading-relaxed max-w-2xl">
-                        {data.personalInfo.summary}
+                        {summary}
                     </p>
 
+                    {/* Social & Primary Action Buttons */}
                     <div className="flex flex-wrap gap-4 mb-10">
                         <motion.a
                             href={data.personalInfo.socialLinks.linkedin}
@@ -61,44 +64,37 @@ const Hero = () => {
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="flex items-center px-6 py-3 bg-zinc-900 dark:bg-white text-white dark:text-black rounded-xl font-bold transition-shadow hover:shadow-lg hover:shadow-zinc-500/20"
+                            className="flex items-center px-6 py-3 bg-zinc-900 dark:bg-white text-white dark:text-black rounded-xl font-bold transition-shadow hover:shadow-lg hover:shadow-zinc-500/20 shadow-md"
                         >
                             <Github className="w-5 h-5 mr-2" />
                             GitHub
                         </motion.a>
-                        <motion.a
-                            href={`mailto:${data.personalInfo.email}`}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="flex items-center px-6 py-3 bg-white/50 dark:bg-zinc-800/50 backdrop-blur-sm border border-gray-200 dark:border-zinc-700 text-gray-700 dark:text-gray-300 rounded-xl font-bold transition-all hover:bg-gray-50 dark:hover:bg-zinc-700"
+                        <a
+                            href="#experience"
+                            className="inline-flex items-center px-8 py-3 bg-blue-600 text-white rounded-xl font-bold transition-all hover:bg-blue-700 shadow-lg shadow-blue-500/20 active:scale-95"
                         >
-                            <Mail className="w-5 h-5 mr-2" />
-                            {data.hero.btnContact}
-                        </motion.a>
+                            {btnExperience}
+                            <ArrowRight className="ml-2 w-5 h-5" />
+                        </a>
                     </div>
 
-                    <div className="flex flex-wrap gap-4 mb-10">
-                        <span className="inline-flex items-center text-gray-600 dark:text-gray-400">
+                    {/* Contact Details */}
+                    <div className="flex flex-wrap gap-6 mb-10">
+                        <span className="inline-flex items-center text-gray-600 dark:text-gray-400 font-medium">
                             <MapPin className="w-5 h-5 mr-2 text-blue-500" />
                             {location}
                         </span>
-                        <span className="inline-flex items-center text-gray-600 dark:text-gray-400">
+                        <a
+                            href={`mailto:${email}`}
+                            className="inline-flex items-center text-gray-600 dark:text-gray-400 font-medium hover:text-blue-600 transition-colors"
+                        >
+                            <Mail className="w-5 h-5 mr-2 text-blue-500" />
                             {email}
-                        </span>
-                        <span className="inline-flex items-center text-gray-600 dark:text-gray-400">
+                        </a>
+                        <span className="inline-flex items-center text-gray-600 dark:text-gray-400 font-medium">
                             <Phone className="w-5 h-5 mr-2 text-blue-500" />
                             {phone}
                         </span>
-                    </div>
-
-                    <div className="flex flex-col sm:flex-row gap-4">
-                        <a href="#experience" className="inline-flex justify-center items-center px-8 py-3.5 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30">
-                            {btnExperience}
-                            <ArrowRight className="ml-2 -mr-1 w-5 h-5" />
-                        </a>
-                        <a href={`mailto:${email}`} className="inline-flex justify-center items-center px-8 py-3.5 border-2 border-gray-200 dark:border-zinc-800 text-base font-medium rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-zinc-800 transition-colors">
-                            {btnContact}
-                        </a>
                     </div>
                 </motion.div>
 
