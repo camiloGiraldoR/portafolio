@@ -237,7 +237,7 @@ export const portfolioData = {
             { category: "Leadership & Soft Skills", items: ["Junior Mentorship", "Technical Talks", "Technical Assessment", "Technical Leadership", "Assertive Communication"] },
             { category: "Backend & Core", items: ["Java/JEE (Expert)", "Spring Boot / Spring Cloud", "Spring Batch", "Node.js", "Go", ".NET / EntityFramework"] },
             { category: "Frontend", items: ["React.js", "Angular", "TypeScript", "JavaScript", "HTML/CSS", "Redux"] },
-            { category: "Databases", items: ["PostgreSQL", "Oracle DB", "MySQL", "SQL Server", "Azure DB2"] },
+            { category: "Databases", items: ["PostgreSQL", "Oracle DB", "MySQL", "SQL Server", "Redis", "MongoDB", "Azure DB2"] },
             { category: "Cloud & DevOps", items: ["AWS (RDS, IAM, S3, EC2)", "Azure", "CI/CD", "Jenkins", "Anthos", "Kubernetes", "Docker"] },
             { category: "Tools & Testing", items: ["JUnit 5", "Mockito", "Maven", "Gradle", "Git", "Jest", "Kafka", "NewRelic", "Scrum"] },
         ],
