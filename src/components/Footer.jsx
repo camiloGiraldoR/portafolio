@@ -14,11 +14,21 @@ const Footer = () => {
                         <span className="sr-only">Email</span>
                         <Mail className="w-6 h-6" />
                     </a>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    <a
+                        href={data.personalInfo.socialLinks.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-white transition-colors"
+                    >
                         <span className="sr-only">GitHub</span>
                         <Github className="w-6 h-6" />
                     </a>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                    <a
+                        href={data.personalInfo.socialLinks.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-white transition-colors"
+                    >
                         <span className="sr-only">LinkedIn</span>
                         <Linkedin className="w-6 h-6" />
                     </a>
