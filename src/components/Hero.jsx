@@ -1,5 +1,12 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowRight, MapPin, Mail, Phone } from 'lucide-react';
+import {
+    Download,
+    ChevronRight,
+    Linkedin,
+    Github,
+    Mail,
+    Phone
+} from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
 import profilePhoto from '../assets/photo-profile.jpeg';
@@ -32,9 +39,43 @@ const Hero = () => {
                     <h2 className="text-2xl md:text-3xl font-medium text-gray-600 dark:text-gray-300 mb-8">
                         {title}
                     </h2>
-                    <p className="text-lg text-gray-600 dark:text-gray-400 mb-10 leading-relaxed max-w-3xl whitespace-pre-line">
-                        {summary}
+                    <p className="text-gray-600 dark:text-gray-400 text-lg mb-8 leading-relaxed max-w-2xl">
+                        {data.personalInfo.summary}
                     </p>
+
+                    <div className="flex flex-wrap gap-4 mb-10">
+                        <motion.a
+                            href={data.personalInfo.socialLinks.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="flex items-center px-6 py-3 bg-[#0A66C2] text-white rounded-xl font-bold transition-shadow hover:shadow-lg hover:shadow-[#0A66C2]/20"
+                        >
+                            <Linkedin className="w-5 h-5 mr-2" />
+                            LinkedIn
+                        </motion.a>
+                        <motion.a
+                            href={data.personalInfo.socialLinks.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="flex items-center px-6 py-3 bg-zinc-900 dark:bg-white text-white dark:text-black rounded-xl font-bold transition-shadow hover:shadow-lg hover:shadow-zinc-500/20"
+                        >
+                            <Github className="w-5 h-5 mr-2" />
+                            GitHub
+                        </motion.a>
+                        <motion.a
+                            href={`mailto:${data.personalInfo.email}`}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="flex items-center px-6 py-3 bg-white/50 dark:bg-zinc-800/50 backdrop-blur-sm border border-gray-200 dark:border-zinc-700 text-gray-700 dark:text-gray-300 rounded-xl font-bold transition-all hover:bg-gray-50 dark:hover:bg-zinc-700"
+                        >
+                            <Mail className="w-5 h-5 mr-2" />
+                            {data.hero.btnContact}
+                        </motion.a>
+                    </div>
 
                     <div className="flex flex-wrap gap-4 mb-10">
                         <span className="inline-flex items-center text-gray-600 dark:text-gray-400">
@@ -42,7 +83,6 @@ const Hero = () => {
                             {location}
                         </span>
                         <span className="inline-flex items-center text-gray-600 dark:text-gray-400">
-                            <Mail className="w-5 h-5 mr-2 text-blue-500" />
                             {email}
                         </span>
                         <span className="inline-flex items-center text-gray-600 dark:text-gray-400">
