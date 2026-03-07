@@ -11,8 +11,10 @@ const Navbar = () => {
     const { language, toggleLanguage } = useLanguage();
 
     useEffect(() => {
-        // Inicializar tema basado en preferencia o default oscuro
-        const isDark = localStorage.getItem('theme') !== 'light';
+        // Por defecto oscuro a menos que explícitamente se haya elegido light
+        const savedTheme = localStorage.getItem('theme');
+        const isDark = savedTheme === null || savedTheme === 'dark';
+
         setDarkMode(isDark);
         if (isDark) {
             document.documentElement.classList.add('dark');
