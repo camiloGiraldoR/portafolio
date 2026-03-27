@@ -17,10 +17,10 @@ function App() {
         <Navbar />
         <main className="relative z-10">
           <Hero />
-          <Experience />
           <Skills />
+          <Experience />
           <Education />
-          <Resume />
+          {/* <Resume /> */}
         </main>
         <Footer />
       </div>

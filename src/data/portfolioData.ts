@@ -31,7 +31,7 @@ export const portfolioData = {
             email: "cagiraldo88@gmail.com",
             phone: "+57 312 3865 021",
             location: "Cali - Colombia",
-            summary: "Ingeniero Full Stack con más de 10 años de trayectoria diseñando soluciones tecnológicas escalables y de alto impacto. Experto en el ecosistema Java, .NET, Node.js y frameworks modernos como React y Angular. Mi base sólida en ingeniería de software tradicional me permite garantizar la calidad, el rigor técnico y la mantenibilidad en cada desarrollo.\n\nAdemás, he potenciado mi flujo de trabajo integrando herramientas de Inteligencia Artificial de forma consciente, utilizándolas para optimizar tiempos de entrega y mejorar la precisión sin comprometer los fundamentos técnicos. Especialista en arquitecturas cloud (AWS/Azure) y liderazgo técnico, transformo problemas complejos en sistemas robustos y eficientes.",
+            summary: "Ingeniero Full Stack con más de 9 años de trayectoria diseñando soluciones tecnológicas escalables y de alto impacto. Experto en el ecosistema Java, .NET, Node.js y frameworks modernos como React y Angular. Mi base sólida en ingeniería de software tradicional me permite garantizar la calidad, el rigor técnico y la mantenibilidad en cada desarrollo.\n\nAdemás, he potenciado mi flujo de trabajo integrando herramientas de Inteligencia Artificial de forma consciente, utilizándolas para optimizar tiempos de entrega y mejorar la precisión sin comprometer los fundamentos técnicos. Especialista en arquitecturas cloud (AWS/Azure) y liderazgo técnico, transformo problemas complejos en sistemas robustos y eficientes.",
             cvFile: "HV - Camilo Giraldo Ramirez.pdf",
             socialLinks: {
                 linkedin: "https://www.linkedin.com/in/camilo-armando-giraldo-ramirez/",
@@ -47,6 +47,7 @@ export const portfolioData = {
         ],
         skills: [
             { category: "Liderazgo & Soft Skills", items: ["Mentoría de Juniors", "Charlas Técnicas", "Valoración Técnica", "Liderazgo Técnico", "Comunicación Asertiva"] },
+            { category: "Arquitecturas", items: ["Microservicios", "Monolítico", "Event-Driven", "N-Capas", "MVC"] },
             { category: "Backend & Core", items: ["Java/JEE (Expert)", "Spring Boot / Spring Cloud", "Spring Batch", "Node.js", "Go", ".NET / EntityFramework"] },
             { category: "Frontend", items: ["React.js", "Angular", "TypeScript", "JavaScript", "HTML/CSS", "Redux"] },
             { category: "Databases", items: ["PostgreSQL", "Oracle DB", "MySQL", "SQL Server", "Redis", "MongoDB", "Azure DB2"] },
@@ -219,7 +220,7 @@ export const portfolioData = {
             email: "cagiraldo88@gmail.com",
             phone: "+57 312 3865 021",
             location: "Cali - Colombia",
-            summary: "Full Stack Engineer with 10+ years of experience building scalable, high-impact technological solutions. Expert in Java, .NET, Node.js, and modern frameworks like React and Angular. My solid foundation in traditional software engineering allows me to ensure quality, technical rigor, and maintainability in every development.\n\nAdditionally, I have enhanced my workflow by consciously integrating Artificial Intelligence tools, using them to optimize delivery times and improve precision without compromising technical fundamentals. Specialist in cloud architectures (AWS/Azure) and technical leadership, I transform complex challenges into robust and efficient systems.",
+            summary: "Full Stack Engineer with 9+ years of experience building scalable, high-impact technological solutions. Expert in Java, .NET, Node.js, and modern frameworks like React and Angular. My solid foundation in traditional software engineering allows me to ensure quality, technical rigor, and maintainability in every development.\n\nAdditionally, I have enhanced my workflow by consciously integrating Artificial Intelligence tools, using them to optimize delivery times and improve precision without compromising technical fundamentals. Specialist in cloud architectures (AWS/Azure) and technical leadership, I transform complex challenges into robust and efficient systems.",
             cvFile: "CV - Camilo Giraldo Ramirez.pdf",
             socialLinks: {
                 linkedin: "https://www.linkedin.com/in/camilo-armando-giraldo-ramirez/",
@@ -235,6 +236,7 @@ export const portfolioData = {
         ],
         skills: [
             { category: "Leadership & Soft Skills", items: ["Junior Mentorship", "Technical Talks", "Technical Assessment", "Technical Leadership", "Assertive Communication"] },
+            { category: "Architectures", items: ["Microservices", "Monolithic", "Event-Driven", "N-Layers", "MVC"] },
             { category: "Backend & Core", items: ["Java/JEE (Expert)", "Spring Boot / Spring Cloud", "Spring Batch", "Node.js", "Go", ".NET / EntityFramework"] },
             { category: "Frontend", items: ["React.js", "Angular", "TypeScript", "JavaScript", "HTML/CSS", "Redux"] },
             { category: "Databases", items: ["PostgreSQL", "Oracle DB", "MySQL", "SQL Server", "Redis", "MongoDB", "Azure DB2"] },
