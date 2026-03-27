@@ -61,7 +61,7 @@ export const portfolioData = {
                 period: "Sept 2019 – Actual",
                 projects: [
                     {
-                        client: "Scotiabank Uruguay",
+                        industry: "Banca - Uruguay",
                         description: "Senior Software Developer enfocado en liderazgo técnico, arquitecturas básicas, y migración de microservicios.",
                         responsibilities: [
                             "Lideré la migración y resolución de vulnerabilidades críticas en múltiples microservicios actualizando versiones de Java.",
@@ -71,7 +71,7 @@ export const portfolioData = {
                         ]
                     },
                     {
-                        client: "Novaventa Colombia",
+                        industry: "Retail / Venta Directa - Colombia",
                         description: "Software Developer Java responsable de optimizaciones críticas, nuevas funcionalidades y modernización de componentes.",
                         responsibilities: [
                             "Mejoré significativamente el caché en procesos clave y escalé versiones de Java junto con librerías internas.",
@@ -81,7 +81,7 @@ export const portfolioData = {
                         ]
                     },
                     {
-                        client: "Donnelley Financial Solutions (USA)",
+                        industry: "Finanzas / Regulación - USA",
                         description: "Desarrollo de nuevas características bajo estándares regulatorios para reportes financieros ante la SEC y ESEF.",
                         responsibilities: [
                             "Desarrollé nuevas características utilizando tecnologías Full Stack Java y React.",
@@ -90,7 +90,7 @@ export const portfolioData = {
                         ]
                     },
                     {
-                        client: "DHL (USA)",
+                        industry: "Logística / Cadena de Suministro - USA",
                         description: "Modernización de infraestructura tecnológica y gestión de cadena de suministro.",
                         responsibilities: [
                             "Actualización tecnológica de Java 8 a Java 16.",
@@ -99,7 +99,7 @@ export const portfolioData = {
                         ]
                     },
                     {
-                        client: "Constructora Bolívar (COL)",
+                        industry: "Construcción / Inmobiliaria - Colombia",
                         description: "Gestión del proceso de compra y seguimiento de construcción.",
                         responsibilities: [
                             "Migración a arquitectura de microservicios usando Full Stack Java y Angular.",
@@ -108,7 +108,7 @@ export const portfolioData = {
                         ]
                     },
                     {
-                        client: "Mutual Ser EPS",
+                        industry: "Salud / EPS - Colombia",
                         description: "Sistema de gestión de inscripción en el sector salud.",
                         responsibilities: [
                             "Desarrollo de características para inscripción y acceso a salud.",
@@ -117,7 +117,7 @@ export const portfolioData = {
                         ]
                     },
                     {
-                        client: "Localiza Colombia",
+                        industry: "Alquiler de Vehículos - Colombia",
                         description: "Sistema de gestión de facturación electrónica de arrendamiento.",
                         responsibilities: [
                             "Desarrollo de interfaces en Angular para gestión de facturas.",
@@ -134,7 +134,7 @@ export const portfolioData = {
                 period: "Oct 2018 – Sept 2019",
                 projects: [
                     {
-                        client: "Carvajal Tecnologías y Servicios",
+                        industry: "Facturación Electrónica - Colombia",
                         description: "Desarrollo de aplicaciones internas y plataforma de facturación electrónica para Latinoamérica.",
                         responsibilities: [
                             "Desarrollo en Java Spring Boot, MyBatis, Spring Data, REST y WSDL.",
@@ -151,7 +151,7 @@ export const portfolioData = {
                 period: "Jul 2013 – Sept 2017",
                 projects: [
                     {
-                        client: "CNT Ecuador",
+                        industry: "Telecomunicaciones - Ecuador",
                         description: "Desarrollo de aplicación desde cero para gestionar tráfico de llamadas a nivel nacional.",
                         responsibilities: [
                             "Participé como desarrollador full stack utilizando Java, HTML, JavaScript, jQuery y GWT.",
@@ -249,7 +249,7 @@ export const portfolioData = {
                 period: "Sept 2019 – Present",
                 projects: [
                     {
-                        client: "Scotiabank Uruguay",
+                        industry: "Banking - Uruguay",
                         description: "Senior Software Developer focused on technical leadership, core architectures, and microservices migration.",
                         responsibilities: [
                             "Led the migration and resolution of critical vulnerabilities across multiple microservices by upgrading Java versions.",
@@ -259,7 +259,7 @@ export const portfolioData = {
                         ]
                     },
                     {
-                        client: "Novaventa Colombia",
+                        industry: "Retail / Direct Sales - Colombia",
                         description: "Software Developer Java responsible for critical optimizations, new features, and component modernization.",
                         responsibilities: [
                             "Significantly improved caching in key processes and upgraded Java versions along with core internal libraries.",
@@ -269,7 +269,7 @@ export const portfolioData = {
                         ]
                     },
                     {
-                        client: "Donnelley Financial Solutions (USA)",
+                        industry: "Finance / Regulatory - USA",
                         description: "Development of new features following regulatory accounting standards for SEC and ESEF financial reporting.",
                         responsibilities: [
                             "Developed new features using Full Stack Java and React technologies.",
@@ -278,7 +278,7 @@ export const portfolioData = {
                         ]
                     },
                     {
-                        client: "DHL (USA)",
+                        industry: "Logistics / Supply Chain - USA",
                         description: "Modernization of technological architecture and supply chain management logistics.",
                         responsibilities: [
                             "Technology architecture migration from Java 8 to Java 16.",
@@ -287,7 +287,7 @@ export const portfolioData = {
                         ]
                     },
                     {
-                        client: "Constructora Bolívar (COL)",
+                        industry: "Construction / Real Estate - Colombia",
                         description: "Purchase order and construction progress management architecture.",
                         responsibilities: [
                             "Migrated monolithic logic to microservices using Full Stack Java and Angular.",
@@ -296,7 +296,7 @@ export const portfolioData = {
                         ]
                     },
                     {
-                        client: "Mutual Ser EPS",
+                        industry: "Healthcare / Insurance - Colombia",
                         description: "Healthcare enrollment and affiliation management software.",
                         responsibilities: [
                             "Developed enrollment components and access portals to healthcare services.",
@@ -305,7 +305,7 @@ export const portfolioData = {
                         ]
                     },
                     {
-                        client: "Localiza Colombia",
+                        industry: "Vehicle Rental - Colombia",
                         description: "Leasing and electronic billing management software dashboard.",
                         responsibilities: [
                             "Angular interfaces development for the billing administration workflows.",
@@ -322,7 +322,7 @@ export const portfolioData = {
                 period: "Oct 2018 – Sept 2019",
                 projects: [
                     {
-                        client: "Carvajal Tecnologías y Servicios",
+                        industry: "E-Billing Platform - Colombia",
                         description: "Development of internal software routing and e-billing systems across Latin America.",
                         responsibilities: [
                             "Backend development on Java Spring Boot, MyBatis, Spring Data, REST, and WSDL ecosystems.",
@@ -339,7 +339,7 @@ export const portfolioData = {
                 period: "Jul 2013 – Sept 2017",
                 projects: [
                     {
-                        client: "CNT Ecuador",
+                        industry: "Telecommunications - Ecuador",
                         description: "Full stack developer designing an application from scratch to manage nationwide call traffic.",
                         responsibilities: [
                             "Contributed as a full stack developer using Java, HTML, JavaScript, jQuery, and GWT.",

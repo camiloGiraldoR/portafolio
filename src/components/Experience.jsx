@@ -47,7 +47,7 @@ const Experience = () => {
                                     <SpotlightCard key={pIndex} className="group bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm p-6 rounded-xl border border-gray-100 dark:border-zinc-800 transition-all duration-300">
                                         <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-2 flex items-center">
                                             <span className="w-2 h-2 bg-blue-500 rounded-full mr-2" />
-                                            {project.client}
+                                            {project.industry}
                                         </h4>
                                         <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
                                             {project.description}
