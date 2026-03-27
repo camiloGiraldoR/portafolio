@@ -355,12 +355,12 @@ export const portfolioData = {
         ],
         education: [
             {
-                degree: "Systems Engineering",
+                degree: "Bachelor's Degree in Systems Engineering",
                 institution: "Universidad Antonio Jose Camacho, Col.",
                 year: "2019"
             },
             {
-                degree: "Software Analysis and Development Technology",
+                degree: "Associate Degree in Software Analysis and Development",
                 institution: "SENA, Col.",
                 year: "2016"
             }
