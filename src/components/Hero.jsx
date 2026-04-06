@@ -20,7 +20,7 @@ const Hero = () => {
     const { language } = useLanguage();
     const data = portfolioData[language];
     const { name, title, summary, location, email, phone } = data.personalInfo;
-    const { availability, greeting, rolesTitle, btnExperience, btnContact } = data.hero;
+    const { availability, greeting, rolesTitle, btnSkills, btnContact } = data.hero;
 
     const sectionRef = useRef(null);
     const badgeRef = useRef(null);
@@ -203,10 +203,10 @@ const Hero = () => {
                         </MagneticButton>
                         <MagneticButton>
                             <a
-                                href="#experience"
+                                href="#skills"
                                 className="inline-flex items-center px-8 py-3 bg-blue-600 text-white rounded-xl font-bold transition-all hover:bg-blue-700 shadow-lg shadow-blue-500/20 active:scale-95"
                             >
-                                {btnExperience}
+                                {btnSkills}
                                 <ArrowRight className="ml-2 w-5 h-5" />
                             </a>
                         </MagneticButton>

@@ -11,7 +11,7 @@ export const portfolioData = {
             availability: 'Abierto a nuevas oportunidades',
             greeting: 'Hola, soy',
             rolesTitle: 'Roles Destacados',
-            btnExperience: 'Ver Experiencia',
+            btnSkills: 'Ver Habilidades',
             btnContact: 'Contactar'
         },
         sections: {
@@ -200,7 +200,7 @@ export const portfolioData = {
             availability: 'Open to new opportunities',
             greeting: 'Hi, I am',
             rolesTitle: 'Featured Roles',
-            btnExperience: 'View Experience',
+            btnSkills: 'View Skills',
             btnContact: 'Contact Me'
         },
         sections: {
