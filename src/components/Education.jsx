@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import {
     GraduationCap,
     Award,
@@ -12,7 +11,7 @@ import {
 } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
-import { Reveal } from './Reveal';
+import GsapReveal from './GsapReveal';
 import { SpotlightCard } from './SpotlightCard';
 
 const getCourseIcon = (courseName) => {
@@ -36,41 +35,41 @@ const Education = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                 {/* Courses & Certifications */}
                 <div>
-                    <Reveal>
+                    <GsapReveal direction="left">
                         <div className="flex items-center mb-10">
                             <Award className="w-8 h-8 text-blue-600 mr-4" />
                             <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
                                 {data.sections.courses}
                             </h2>
                         </div>
-                    </Reveal>
+                    </GsapReveal>
 
                     <div className="space-y-4">
                         {data.courses.map((course, index) => (
-                            <Reveal key={index} delay={index * 0.05}>
+                            <GsapReveal key={index} direction="left" delay={index * 0.05} distance={40}>
                                 <SpotlightCard className="group flex items-center p-4 bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm rounded-xl border border-gray-100 dark:border-zinc-800 transition-all duration-300">
                                     {getCourseIcon(course)}
                                     <span className="text-gray-700 dark:text-gray-300 font-medium">{course}</span>
                                 </SpotlightCard>
-                            </Reveal>
+                            </GsapReveal>
                         ))}
                     </div>
                 </div>
 
                 {/* Education */}
                 <div>
-                    <Reveal>
+                    <GsapReveal direction="right">
                         <div className="flex items-center mb-10">
                             <GraduationCap className="w-8 h-8 text-blue-600 mr-4" />
                             <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
                                 {data.sections.education}
                             </h2>
                         </div>
-                    </Reveal>
+                    </GsapReveal>
 
                     <div className="space-y-8">
                         {data.education.map((edu, index) => (
-                            <Reveal key={index} delay={index * 0.1}>
+                            <GsapReveal key={index} direction="right" delay={index * 0.1}>
                                 <div className="relative pl-8 border-l-2 border-gray-100 dark:border-zinc-800">
                                     <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600" />
                                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
@@ -84,7 +83,7 @@ const Education = () => {
                                         {edu.year}
                                     </div>
                                 </div>
-                            </Reveal>
+                            </GsapReveal>
                         ))}
                     </div>
                 </div>

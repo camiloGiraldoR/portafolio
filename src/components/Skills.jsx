@@ -1,4 +1,6 @@
-import { motion } from 'framer-motion';
+import { useRef, useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
     Code2,
     Database,
@@ -11,12 +13,15 @@ import {
 } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
-import { Reveal } from './Reveal';
+import GsapReveal from './GsapReveal';
 import { SpotlightCard } from './SpotlightCard';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
     const { language } = useLanguage();
     const data = portfolioData[language];
+    const gridRef = useRef(null);
 
     const getIconForCategory = (category) => {
         const lowerCat = category.toLowerCase();
@@ -28,9 +33,35 @@ const Skills = () => {
         return <Terminal className="w-6 h-6" />;
     };
 
+    // Stagger animation for skill tags within each card
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.utils.toArray('.skill-tag').forEach((tag, i) => {
+                gsap.fromTo(
+                    tag,
+                    { scale: 0.8, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.3,
+                        delay: i * 0.02,
+                        ease: 'back.out(2)',
+                        scrollTrigger: {
+                            trigger: tag,
+                            start: 'top 90%',
+                            once: true,
+                        },
+                    }
+                );
+            });
+        }, gridRef);
+
+        return () => ctx.revert();
+    }, [language]);
+
     return (
         <section id="skills" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-            <Reveal>
+            <GsapReveal>
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                         {data.sections.skills}
@@ -40,11 +71,11 @@ const Skills = () => {
                     </p>
                     <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full mt-6" />
                 </div>
-            </Reveal>
+            </GsapReveal>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {data.skills.map((skillGroup, index) => (
-                    <Reveal key={index} delay={index * 0.1}>
+                    <GsapReveal key={index} direction="rotate" delay={index * 0.08}>
                         <SpotlightCard className="group bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-100 dark:border-zinc-800 hover:border-blue-500 transition-all duration-300">
                             <div className="flex items-center mb-6">
                                 <div className="p-3 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-xl mr-4 group-hover:scale-110 transition-transform">
@@ -58,14 +89,14 @@ const Skills = () => {
                                 {skillGroup.items.map((skill, sIndex) => (
                                     <span
                                         key={sIndex}
-                                        className="px-3 py-1.5 bg-gray-100 dark:bg-zinc-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium hover:bg-blue-600 hover:text-white transition-colors cursor-default"
+                                        className="skill-tag px-3 py-1.5 bg-gray-100 dark:bg-zinc-800 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium hover:bg-blue-600 hover:text-white transition-colors cursor-default"
                                     >
                                         {skill}
                                     </span>
                                 ))}
                             </div>
                         </SpotlightCard>
-                    </Reveal>
+                    </GsapReveal>
                 ))}
             </div>
         </section>

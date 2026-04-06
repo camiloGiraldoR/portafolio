@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { useState, useEffect, useRef } from 'react';
+import gsap from 'gsap';
 import { Menu, X, Mail, Globe, Sun, Moon } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
@@ -10,11 +10,14 @@ const Navbar = () => {
     const [darkMode, setDarkMode] = useState(true);
     const { language, toggleLanguage } = useLanguage();
 
+    const logoRef = useRef(null);
+    const navLinksRef = useRef(null);
+    const actionsRef = useRef(null);
+    const mobileMenuRef = useRef(null);
+
     useEffect(() => {
-        // Por defecto oscuro a menos que explícitamente se haya elegido light
         const savedTheme = localStorage.getItem('theme');
         const isDark = savedTheme === null || savedTheme === 'dark';
-
         setDarkMode(isDark);
         if (isDark) {
             document.documentElement.classList.add('dark');
@@ -45,6 +48,71 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // GSAP entrance animations
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Logo scramble/glitch entrance
+            gsap.fromTo(
+                logoRef.current,
+                { opacity: 0, x: -30, filter: 'blur(8px)' },
+                { opacity: 1, x: 0, filter: 'blur(0px)', duration: 0.8, ease: 'power3.out' }
+            );
+
+            // Nav links stagger
+            if (navLinksRef.current) {
+                gsap.fromTo(
+                    navLinksRef.current.children,
+                    { opacity: 0, y: -15 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.5,
+                        stagger: 0.08,
+                        delay: 0.3,
+                        ease: 'power2.out',
+                    }
+                );
+            }
+
+            // Actions
+            if (actionsRef.current) {
+                gsap.fromTo(
+                    actionsRef.current.children,
+                    { opacity: 0, y: -10 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.4,
+                        stagger: 0.1,
+                        delay: 0.6,
+                        ease: 'power2.out',
+                    }
+                );
+            }
+        });
+
+        return () => ctx.revert();
+    }, []);
+
+    // Mobile menu animation
+    useEffect(() => {
+        if (!mobileMenuRef.current) return;
+
+        if (isOpen) {
+            gsap.fromTo(
+                mobileMenuRef.current,
+                { height: 0, opacity: 0 },
+                { height: 'auto', opacity: 1, duration: 0.4, ease: 'power2.out' }
+            );
+            // Stagger menu items
+            gsap.fromTo(
+                mobileMenuRef.current.querySelectorAll('a'),
+                { x: -20, opacity: 0 },
+                { x: 0, opacity: 1, duration: 0.3, stagger: 0.06, delay: 0.15, ease: 'power2.out' }
+            );
+        }
+    }, [isOpen]);
+
     const navLinks = [
         { name: data.nav.about, href: '#about' },
         { name: data.nav.experience, href: '#experience' },
@@ -60,20 +128,15 @@ const Navbar = () => {
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between">
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        className="flex-shrink-0"
-                    >
+                    <div ref={logoRef} className="flex-shrink-0">
                         <a href="#" className="font-bold text-2xl tracking-tighter text-blue-600 dark:text-blue-500">
                             CG<span className="text-gray-900 dark:text-gray-100">.</span>
                         </a>
-                    </motion.div>
+                    </div>
 
                     <div className="hidden md:flex items-center">
-                        <motion.div
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
+                        <div
+                            ref={navLinksRef}
                             className="ml-10 flex items-baseline space-x-8"
                         >
                             {navLinks.map((link, index) => (
@@ -85,11 +148,10 @@ const Navbar = () => {
                                     {link.name}
                                 </a>
                             ))}
-                        </motion.div>
+                        </div>
 
-                        <motion.div
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
+                        <div
+                            ref={actionsRef}
                             className="ml-6 flex items-center space-x-4 border-l border-gray-200 dark:border-zinc-800 pl-6"
                         >
                             <a href={`mailto:${data.personalInfo.email}`} className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors">
@@ -110,7 +172,7 @@ const Navbar = () => {
                                 <Globe size={16} />
                                 <span>{language === 'es' ? 'EN' : 'ES'}</span>
                             </button>
-                        </motion.div>
+                        </div>
                     </div>
 
                     <div className="-mr-2 flex md:hidden items-center space-x-4">
@@ -139,10 +201,9 @@ const Navbar = () => {
             </div>
 
             {isOpen && (
-                <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    className="md:hidden bg-white dark:bg-zinc-900 shadow-xl"
+                <div
+                    ref={mobileMenuRef}
+                    className="md:hidden bg-white dark:bg-zinc-900 shadow-xl overflow-hidden"
                 >
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                         {navLinks.map((link, index) => (
@@ -156,7 +217,7 @@ const Navbar = () => {
                             </a>
                         ))}
                     </div>
-                </motion.div>
+                </div>
             )}
         </nav>
     );

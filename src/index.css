@@ -4,7 +4,6 @@
 
 @theme {
   --color-primary-500: #3b82f6;
-  /* Example primary color adjustments if needed later */
 }
 
 @layer base {
@@ -12,15 +11,33 @@
     color-scheme: light;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   html.dark {
     color-scheme: dark;
     background-color: #09090b;
-    /* zinc-950 */
     color: #f4f4f5;
-    /* zinc-100 */
   }
 
   body {
     @apply antialiased bg-gray-50 text-gray-900 dark:bg-zinc-950 dark:text-gray-100 transition-colors duration-300;
+  }
+
+  /* Hide default cursor on desktop when custom cursor is active */
+  @media (pointer: fine) {
+    .cursor-none,
+    .cursor-none * {
+      cursor: none !important;
+    }
+  }
+
+  /* Ensure cursor is visible on touch devices */
+  @media (pointer: coarse) {
+    .cursor-none,
+    .cursor-none * {
+      cursor: auto !important;
+    }
   }
 }
