@@ -32,7 +32,7 @@ export const portfolioData = {
             phone: "+57 312 3865 021",
             location: "Cali - Colombia",
             summary: "Ingeniero Full Stack con más de 9 años de trayectoria diseñando soluciones tecnológicas escalables y de alto impacto. Experto en el ecosistema Java, .NET, Node.js y frameworks modernos como React y Angular. Mi base sólida en ingeniería de software tradicional me permite garantizar la calidad, el rigor técnico y la mantenibilidad en cada desarrollo.\n\nAdemás, he potenciado mi flujo de trabajo integrando herramientas de Inteligencia Artificial de forma consciente, utilizándolas para optimizar tiempos de entrega y mejorar la precisión sin comprometer los fundamentos técnicos. Especialista en arquitecturas cloud (AWS/Azure) y liderazgo técnico, transformo problemas complejos en sistemas robustos y eficientes.",
-            cvFile: "HV - Camilo Giraldo Ramirez.pdf",
+            cvFile: "CV_Camilo_Giraldo_Ramirez_Resume_noprf.pdf",
             socialLinks: {
                 linkedin: "https://www.linkedin.com/in/camilo-armando-giraldo-ramirez/",
                 github: "https://github.com/camiloGiraldoR"
@@ -221,7 +221,7 @@ export const portfolioData = {
             phone: "+57 312 3865 021",
             location: "Cali - Colombia",
             summary: "Full Stack Engineer with 9+ years of experience building scalable, high-impact technological solutions. Expert in Java, .NET, Node.js, and modern frameworks like React and Angular. My solid foundation in traditional software engineering allows me to ensure quality, technical rigor, and maintainability in every development.\n\nAdditionally, I have enhanced my workflow by consciously integrating Artificial Intelligence tools, using them to optimize delivery times and improve precision without compromising technical fundamentals. Specialist in cloud architectures (AWS/Azure) and technical leadership, I transform complex challenges into robust and efficient systems.",
-            cvFile: "CV - Camilo Giraldo Ramirez.pdf",
+            cvFile: "CV_Camilo_Giraldo_Ramirez_Resume_noprf.pdf",
             socialLinks: {
                 linkedin: "https://www.linkedin.com/in/camilo-armando-giraldo-ramirez/",
                 github: "https://github.com/camiloGiraldoR"

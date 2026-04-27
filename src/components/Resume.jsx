@@ -42,7 +42,7 @@ const Resume = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 text-left">
                             {[
                                 language === 'es' ? 'Formato PDF listo para imprimir' : 'PDF format ready to print',
-                                language === 'es' ? 'Última actualización: Marzo 2026' : 'Last update: March 2026',
+                                language === 'es' ? 'Última actualización: Abril 2026' : 'Last update: April 2026',
                                 language === 'es' ? 'Detalle de stack tecnológico' : 'Detailed tech stack',
                                 language === 'es' ? 'Certificaciones verificadas' : 'Verified certifications'
                             ].map((item, i) => (
@@ -61,11 +61,6 @@ const Resume = () => {
                             {data.sections.resume}
                         </button>
 
-                        <p className="mt-6 text-sm text-gray-500 dark:text-gray-400 italic">
-                            {language === 'es'
-                                ? 'Version en español e inglés disponible automáticamente según tu selección.'
-                                : 'Spanish and English versions available automatically based on your selection.'}
-                        </p>
                     </SpotlightCard>
                 </Reveal>
             </div>

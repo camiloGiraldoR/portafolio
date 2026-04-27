@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import BackgroundShapes from './components/BackgroundShapes';
 import CustomCursor from './components/CustomCursor';
 import HeroScene3D from './components/HeroScene3D';
+import ScrollNavigation from './components/ScrollNavigation';
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -34,13 +35,14 @@ function App() {
                 <CustomCursor />
                 <HeroScene3D />
                 <BackgroundShapes />
+                <ScrollNavigation />
                 <Navbar />
                 <main className="relative z-10">
                     <Hero />
                     <Skills />
                     <Experience />
                     <Education />
-                    {/* <Resume /> */}
+                    <Resume />
                 </main>
                 <Footer />
             </div>
