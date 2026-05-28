@@ -370,7 +370,7 @@ export const portfolioData = {
             }
         ],
         courses: [
-            "AWS Certified AI Practitioner (In Progress)",
+            "AWS Certified AI Practitioner (2026)",
             "AWS Certified Cloud Practitioner (2025)",
             "Product Prioritization Micro-Certification (PPC)",
             "Product Discovery Micro-Certification (PDC)",
