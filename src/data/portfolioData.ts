@@ -179,16 +179,16 @@ export const portfolioData = {
             }
         ],
         courses: [
-            "AWS Certified AI Practitioner",
-            "AWS Certified Cloud Practitioner",
-            "Claude code 101",
+            "AWS Certified AI Practitioner, Amazon",
+            "AWS Certified Cloud Practitioner, Amazon",
+            "Claude code 101, Anthropic",
             "Product Prioritization Micro-Certification (PPC)",
             "Product Discovery Micro-Certification (PDC)",
             "Java Functional Programming with Lambdas & Streams, Udemy",
             "Go Fundamentos, Udemy",
-            "Scrum Developer",
-            "Full Stack Developer",
-            "Oracle 11g Fundamentals"
+            "Scrum Developer, SEONTI",
+            "Full Stack Developer, Universidad SB cali",
+            "Oracle 11g Fundamentals, Oracle"
         ]
     },
     en: {
