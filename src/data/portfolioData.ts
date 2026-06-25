@@ -179,15 +179,16 @@ export const portfolioData = {
             }
         ],
         courses: [
-            "AWS Certified AI Practitioner (Cursando)",
-            "AWS Certified Cloud Practitioner (2025)",
+            "AWS Certified AI Practitioner",
+            "AWS Certified Cloud Practitioner",
+            "Claude code 101",
             "Product Prioritization Micro-Certification (PPC)",
             "Product Discovery Micro-Certification (PDC)",
-            "Java Functional Programming with Lambdas & Streams, Udemy (2022)",
+            "Java Functional Programming with Lambdas & Streams, Udemy",
             "Go Fundamentos, Udemy",
-            "Scrum Developer (2017)",
-            "Full Stack Developer (2019)",
-            "Oracle 11g Fundamentals (2014)"
+            "Scrum Developer",
+            "Full Stack Developer",
+            "Oracle 11g Fundamentals"
         ]
     },
     en: {
