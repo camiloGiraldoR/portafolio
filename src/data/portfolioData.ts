@@ -371,8 +371,9 @@ export const portfolioData = {
             }
         ],
         courses: [
-            "AWS Certified AI Practitioner (2026)",
-            "AWS Certified Cloud Practitioner (2025)",
+            "AWS Certified AI Practitioner, Amazon",
+            "AWS Certified Cloud Practitioner, Amazon",
+            "Claude code 101, Anthropic",
             "Product Prioritization Micro-Certification (PPC)",
             "Product Discovery Micro-Certification (PDC)",
             "Java Functional Programming with Lambdas & Streams, Udemy (2022)",
